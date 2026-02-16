@@ -1,1 +1,4 @@
-a.out
+# C / C++ compiled binaries
+*.out
+*.o
+*.exe
