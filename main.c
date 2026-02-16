@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "basic_calculator.c"
+#include "operation_modules/basic_calculator.c"
 #include "trig.c"
 #include <stdlib.h>
 
@@ -29,6 +29,7 @@ void main_user_input() {
         scanf("%29s", operation);
         if (strcmp(operation, "help") == 0) { printf("\ntrig/basics/sqrt"); free(operation); continue; }
         else if (strcmp(operation, "trig") == 0) { free(operation); break; }
+        else { free(operation); }
     };
 }
 
