@@ -2,6 +2,7 @@
 #include "operation_modules/basic_calculator.c"
 #include "operation_modules/trig.c"
 #include <stdlib.h>
+#include "cli.c"
 
 const char *array[5] = {"Program is starting","\nHello"}; // you can customize what you want
 
@@ -34,6 +35,7 @@ void main_user_input() {
 }
 
 int main() {
+    call();
     printf("%s", array[0]);
     printf("%s", array[1]);
 
