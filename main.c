@@ -2,6 +2,7 @@
 #include "operation_modules/basic_calculator.c"
 #include "operation_modules/trig.c"
 #include <stdlib.h>
+#include "defines/color_defines.h"
 #include "cli.c"
 
 const char *array[5] = {"Program is starting","\nHello"}; // you can customize what you want
@@ -25,7 +26,7 @@ void for_basics_user_input() {
 
 void main_user_input() {
     while (1) {
-        printf("\nPlease select main operation > ");
+        printf(AC_GREEN "\nPlease select main operation > "AC_NORMAL);
         char *operation = malloc(30);
         scanf("%29s", operation);
         if (strcmp(operation, "help") == 0) { printf("\ntrig/basics/sqrt"); free(operation); continue; }
