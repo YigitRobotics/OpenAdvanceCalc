@@ -16,7 +16,7 @@ void for_basics_user_input() {
     scanf("%10d", &numin1);
     printf("Enter second number: ");
     scanf("%10d", &numin2);
-    printf("Enter operation (t/c/b/m): ");
+    printf("Enter operation (a/s/m/d): ");
     int ch;
     while ((ch = getchar()) != '\n' && ch != EOF);
     scanf("%c", &operation);
@@ -29,8 +29,11 @@ void main_user_input() {
         printf(AC_GREEN "\nPlease select main operation > "AC_NORMAL);
         char operation[30];
         scanf("%29s", operation);
-        if (strcmp(operation, "help") == 0) { printf("\ntrig/basics/sqrt"); continue; }
+        if (strcmp(operation, "help") == 0) { printf("\ntrig/basics/sqrt/science"); continue; }
         else if (strcmp(operation, "trig") == 0) { break; }
+        else if (strcmp(operation, "basics") == 0) { for_basics_user_input(); continue;}
+        else if (strcmp(operation, "sqrt") == 0) { break; }
+        else if (strcmp(operation, "science") == 0) { break; }
         else { break; }
     };
 }
