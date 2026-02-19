@@ -27,11 +27,11 @@ void for_basics_user_input() {
 void main_user_input() {
     while (1) {
         printf(AC_GREEN "\nPlease select main operation > "AC_NORMAL);
-        char *operation = malloc(30);
+        char operation[30];
         scanf("%29s", operation);
-        if (strcmp(operation, "help") == 0) { printf("\ntrig/basics/sqrt"); free(operation); continue; }
-        else if (strcmp(operation, "trig") == 0) { free(operation); break; }
-        else { free(operation); }
+        if (strcmp(operation, "help") == 0) { printf("\ntrig/basics/sqrt"); continue; }
+        else if (strcmp(operation, "trig") == 0) { break; }
+        else { break; }
     };
 }
 
