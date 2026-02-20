@@ -1,3 +1,3 @@
 compile-and-run:
-	gcc main.c -o program_bin.out
+	gcc -Wall -Wextra -fsanitize=address,undefined -g main.c -o program_bin.out
 	./program_bin.out
