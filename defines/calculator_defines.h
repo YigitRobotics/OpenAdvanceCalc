@@ -3,5 +3,6 @@
 
 void cli_banner(char *text);
 int trigonometry(char op, long val);
+double calc_sqrt(double number);
 
 #endif

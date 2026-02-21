@@ -5,6 +5,7 @@
 #include "defines/color_defines.h"
 #include "cli.c"
 #include <string.h>
+#include "operation_modules/sqrt.c"
 
 const char *array[5] = {"Program is starting","\nHello"}; // you can customize what you want
 
@@ -23,6 +24,13 @@ void for_basics_user_input() {
     scanf("%c", &operation);
 
     printf("%d", operate_basics(&numin1, &numin2, operation));
+}
+
+void for_sqrt_input() {
+    double l_dInputnum;
+    printf("Enter a number > ");
+    scanf("%lf", &l_dInputnum);
+    printf("%lf", calc_sqrt(l_dInputnum));
 }
 
 void for_trig_input() {
@@ -44,11 +52,12 @@ void main_user_input() {
         printf(AC_GREEN "\nPlease select main operation > "AC_NORMAL);
         char operation[30];
         scanf("%29s", operation);
-        if (strcmp(operation, "help") == 0) { printf("\ntrig/basics/sqrt/science"); continue; }
+        if (strcmp(operation, "help") == 0) { printf("\ntrig/basics/sqrt/science/exit"); continue; }
         else if (strcmp(operation, "trig") == 0) { for_trig_input(); }
         else if (strcmp(operation, "basics") == 0) { for_basics_user_input(); continue;}
-        else if (strcmp(operation, "sqrt") == 0) { break; }
+        else if (strcmp(operation, "sqrt") == 0) { for_sqrt_input(); continue; }
         else if (strcmp(operation, "science") == 0) { break; }
+        else if (strcmp(operation, "exit") == 0) { exit(0); }
         else { break; }
     };
 }
